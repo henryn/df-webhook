@@ -31,7 +31,7 @@ def handle():
     print(json.dumps(req, indent=4))
     if req.get('queryResult').get('action') != 'lookup':
         return {}
-    topic = req.get('queryResult').get('parameters').get('topic')
+    topic = req.get('queryResult').get('parameters').get('Topic')
     print topic
     rsp = getResponse(topic)
     rsp = json.dumps(rsp, indent=4)
